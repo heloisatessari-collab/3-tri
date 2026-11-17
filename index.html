@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Site educativo sobre ondas eletromagnéticas, radiação do corpo negro, efeito fotoelétrico e conversão fotovoltaica da luz em eletricidade.">
+  <meta name="theme-color" content="#073b4c">
+  <title>Sol + Água | Física da luz e energia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Sol e Água, página inicial">
+      <span class="brand-mark" aria-hidden="true">☀</span>
+      <span>Sol <b>+</b> Água</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">☰ <span class="sr-only">Abrir menu</span></button>
+    <nav id="mainNav" aria-label="Menu principal">
+      <a href="#ondas">Luz e ondas</a>
+      <a href="#corpo-negro">Corpo negro</a>
+      <a href="#fotoeletrico">Efeito fotoelétrico</a>
+      <a href="#fotovoltaica">Fotovoltaica</a>
+      <a href="#laboratorio">Laboratório</a>
+      <a href="#piscina">Piscina inteligente</a>
+    </nav>
+  </header>
+
+  <aside class="access-panel" aria-label="Ferramentas de acessibilidade">
+    <span class="access-title">Acessibilidade</span>
+    <button type="button" id="fontDown" aria-label="Diminuir tamanho do texto">A−</button>
+    <button type="button" id="fontUp" aria-label="Aumentar tamanho do texto">A+</button>
+    <button type="button" id="fontReset" aria-label="Restaurar tamanho do texto">A</button>
+    <button type="button" id="contrastToggle" aria-pressed="false">Alto contraste</button>
+    <button type="button" id="dyslexiaToggle" aria-pressed="false">Fonte de leitura</button>
+    <button type="button" id="spacingToggle" aria-pressed="false">Espaçamento</button>
+    <button type="button" id="readPage">🔊 Ler página</button>
+    <button type="button" id="stopRead">Parar leitura</button>
+  </aside>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <p class="eyebrow">Física quântica • Tecnologia • Sustentabilidade</p>
+        <h1>Como a luz pode se transformar em eletricidade?</h1>
+        <p class="hero-lead">Uma jornada pela natureza da luz, pelos fótons e pelos materiais capazes de transformar energia luminosa em energia elétrica.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#ondas">Começar a explorar</a>
+          <a class="btn ghost" href="#laboratorio">Ir para os simuladores</a>
+        </div>
+        <div class="hero-facts" aria-label="Resumo do conteúdo">
+          <span>🌈 Ondas eletromagnéticas</span>
+          <span>⚛️ Física quântica</span>
+          <span>🔋 Energia fotovoltaica</span>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Ilustração de um sol iluminando um painel fotovoltaico">
+        <div class="sun"></div>
+        <div class="rays"></div>
+        <div class="panel-art"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="energy-line">⚡</div>
+        <div class="art-caption">Luz → energia elétrica</div>
+      </div>
+    </section>
+
+    <section class="section intro-grid">
+      <div>
+        <p class="eyebrow">O ponto de partida</p>
+        <h2>A luz é onda e também apresenta comportamento de partícula</h2>
+        <p>A luz é uma forma de radiação eletromagnética. Em muitos fenômenos, ela pode ser descrita como uma onda; em outros, sua energia é transferida em pacotes discretos chamados <strong>fótons</strong>. Essa característica é chamada de dualidade onda-partícula.</p>
+        <p>O estudo dessa interação ajudou a construir a Física Quântica e abriu caminho para tecnologias como sensores de luz, câmeras digitais e células fotovoltaicas.</p>
+      </div>
+      <div class="fact-card">
+        <span class="big-icon">💡</span>
+        <h3>Ideia-chave</h3>
+        <p>A energia de cada fóton depende da frequência da radiação, e não simplesmente do brilho da fonte.</p>
+        <p class="formula">E = h · f</p>
+        <small>E: energia do fóton • h: constante de Planck • f: frequência</small>
+      </div>
+    </section>
+
+    <section class="section" id="ondas">
+      <div class="section-heading">
+        <p class="eyebrow">01 • Natureza da luz</p>
+        <h2>Ondas eletromagnéticas</h2>
+        <p>São oscilações dos campos elétrico e magnético que se propagam transportando energia. No vácuo, todas se propagam à velocidade da luz.</p>
+      </div>
+      <div class="two-col">
+        <div>
+          <h3>Frequência e comprimento de onda</h3>
+          <p><strong>Frequência (f)</strong> é o número de oscilações por segundo, medida em hertz (Hz). <strong>Comprimento de onda (λ)</strong> é a distância entre dois pontos equivalentes consecutivos da onda, medida em metros.</p>
+          <p>Para a radiação no vácuo:</p>
+          <p class="formula">c = λ · f</p>
+          <p>Como a velocidade da luz no vácuo é constante, frequência e comprimento de onda são inversamente proporcionais: quando um aumenta, o outro diminui.</p>
+        </div>
+        <div class="wave-card">
+          <svg viewBox="0 0 520 170" role="img" aria-labelledby="waveTitle waveDesc">
+            <title id="waveTitle">Representação de uma onda eletromagnética</title>
+            <desc id="waveDesc">Uma linha ondulada representa a variação periódica da onda. Uma seta horizontal indica o comprimento de onda.</desc>
+            <path d="M10 85 C45 5 80 5 115 85 S185 165 220 85 S290 5 325 85 S395 165 430 85 S485 5 510 85" fill="none" stroke="#0e9fbd" stroke-width="5"/>
+            <path d="M10 140 H220 M10 132 V148 M220 132 V148" stroke="#073b4c" stroke-width="2"/>
+            <text x="115" y="163" text-anchor="middle" fill="currentColor" font-size="15">λ = comprimento de onda</text>
+          </svg>
+          <p class="small-note">Esquema ilustrativo, sem escala.</p>
+        </div>
+      </div>
+
+      <h3>O espectro eletromagnético</h3>
+      <p>As radiações são organizadas pela frequência ou pelo comprimento de onda. Da menor para a maior frequência:</p>
+      <div class="spectrum" role="img" aria-label="Espectro: ondas de rádio, micro-ondas, infravermelho, luz visível, ultravioleta, raios X e raios gama, em frequência crescente">
+        <span class="radio">Rádio</span>
+        <span class="micro">Micro-ondas</span>
+        <span class="infra">Infravermelho</span>
+        <span class="visible">Visível</span>
+        <span class="uv">Ultravioleta</span>
+        <span class="xray">Raios X</span>
+        <span class="gamma">Gama</span>
+      </div>
+      <div class="spectrum-labels">
+        <span>Menor frequência</span>
+        <span>Maior frequência e energia por fóton</span>
+      </div>
+
+      <div class="cards three">
+        <article class="info-card">
+          <span class="card-icon">📻</span>
+          <h3>Rádio e micro-ondas</h3>
+          <p>Usadas em comunicação, transmissão de sinais, radar e aquecimento por micro-ondas.</p>
+        </article>
+        <article class="info-card">
+          <span class="card-icon">🌡️</span>
+          <h3>Infravermelho</h3>
+          <p>Associado à emissão térmica de objetos e utilizado em controles remotos e câmeras térmicas.</p>
+        </article>
+        <article class="info-card">
+          <span class="card-icon">👁️</span>
+          <h3>Luz visível</h3>
+          <p>Faixa detectada pelo olho humano. É uma parte pequena de todo o espectro eletromagnético.</p>
+        </article>
+        <article class="info-card">
+          <span class="card-icon">🧴</span>
+          <h3>Ultravioleta</h3>
+          <p>Tem frequência maior que a luz visível. Algumas faixas podem provocar reações fotoquímicas e danos à pele.</p>
+        </article>
+        <article class="info-card">
+          <span class="card-icon">🩻</span>
+          <h3>Raios X</h3>
+          <p>Possuem alta energia por fóton e podem atravessar tecidos, sendo usados em exames de imagem.</p>
+        </article>
+        <article class="info-card">
+          <span class="card-icon">☢️</span>
+          <h3>Raios gama</h3>
+          <p>Radiação de frequência muito alta, associada a processos nucleares e fenômenos astrofísicos.</p>
+        </article>
+      </div>
+
+      <div class="callout"><strong>Experimente:</strong> no simulador de fótons, altere a frequência e observe a energia calculada. Aumentar a intensidade da luz significa aumentar o número de fótons, não necessariamente a energia de cada fóton.</div>
+
+      <div class="mini-quiz" data-quiz="q1">
+        <h3>Checagem rápida ⚽</h3>
+        <p>Se a frequência de uma radiação aumenta, mantendo a propagação no vácuo, o que acontece com seu comprimento de onda?</p>
+        <div class="quiz-options">
+          <button data-correct="false">Aumenta também</button>
+          <button data-correct="true">Diminui</button>
+          <button data-correct="false">Permanece igual</button>
+        </div>
+        <p class="feedback" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="section tinted" id="corpo-negro">
+      <div class="section-heading">
+        <p class="eyebrow">02 • Radiação térmica</p>
+        <h2>Radiação do corpo negro</h2>
+        <p>Um corpo negro é um modelo ideal que absorve toda a radiação eletromagnética incidente sobre ele. Quando está em equilíbrio térmico, também emite radiação cujo espectro depende de sua temperatura.</p>
+      </div>
+      <div class="two-col">
+        <div>
+          <h3>Por que esse modelo é importante?</h3>
+          <p>Ao estudar a radiação emitida por corpos aquecidos, a Física clássica não conseguia explicar corretamente toda a distribuição de energia observada. Em 1900, Max Planck propôs que a troca de energia ocorria em quantidades discretas, os quanta. Essa hipótese foi um passo decisivo para o desenvolvimento da Física Quântica.</p>
+          <p>Quanto maior a temperatura, maior é a energia total emitida por unidade de área e menor tende a ser o comprimento de onda no qual a emissão é mais intensa.</p>
+          <p class="formula">λ<sub>máx</sub> · T = b</p>
+          <small>Lei do deslocamento de Wien: b ≈ 2,898 × 10⁻³ m·K.</small>
+        </div>
+        <div class="thermal-visual">
+          <div class="thermal-orb" id="thermalOrb" aria-hidden="true"></div>
+          <label for="tempSlider">Temperatura ilustrativa: <output id="tempOutput">3000</output> K</label>
+          <input id="tempSlider" type="range" min="1000" max="6000" step="100" value="3000">
+          <p id="thermalDescription" aria-live="polite">Ao elevar a temperatura, o pico da emissão se desloca para comprimentos de onda menores.</p>
+        </div>
+      </div>
+      <div class="callout"><strong>Conexão com a piscina:</strong> superfícies absorvem e emitem radiação. Uma piscina aquecida troca energia com o ambiente, inclusive por radiação infravermelha. Porém, também perde calor por evaporação e convecção. A capa térmica reduz especialmente a evaporação.</div>
+      <div class="mini-quiz" data-quiz="q2">
+        <h3>Teste seu entendimento</h3>
+        <p>Se a temperatura de um corpo negro aumenta, o comprimento de onda de pico da emissão tende a:</p>
+        <div class="quiz-options">
+          <button data-correct="true">Diminuir</button>
+          <button data-correct="false">Aumentar</button>
+          <button data-correct="false">Não mudar</button>
+        </div>
+        <p class="feedback" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="section" id="fotoeletrico">
+      <div class="section-heading">
+        <p class="eyebrow">03 • A luz em interação com a matéria</p>
+        <h2>O efeito fotoelétrico</h2>
+        <p>É o fenômeno em que elétrons são emitidos por um material, geralmente uma superfície metálica, quando ele recebe radiação com frequência suficientemente alta.</p>
+      </div>
+      <div class="two-col">
+        <div>
+          <h3>O que a Física clássica não explicava?</h3>
+          <p>Experimentos mostraram que a emissão de elétrons dependia da frequência da luz. Aumentar apenas a intensidade não fazia qualquer luz provocar emissão. Havia uma frequência mínima para cada material.</p>
+          <p>Em 1905, Albert Einstein explicou o fenômeno considerando que a luz transfere energia em pacotes: os fótons. Cada fóton tem energia:</p>
+          <p class="formula">E = h · f</p>
+          <p>Um elétron só pode escapar se receber energia suficiente para vencer a função trabalho do material.</p>
+        </div>
+        <div class="timeline-card">
+          <h3>Uma ideia que mudou a Física</h3>
+          <ol class="timeline">
+            <li><b>1887</b><span>Heinrich Hertz observa fenômenos relacionados à emissão fotoelétrica.</span></li>
+            <li><b>1900</b><span>Max Planck apresenta a hipótese dos quanta para explicar a radiação do corpo negro.</span></li>
+            <li><b>1905</b><span>Albert Einstein explica o efeito fotoelétrico usando quanta de luz.</span></li>
+            <li><b>1921</b><span>Einstein recebe o Nobel de Física, em especial por sua explicação do efeito fotoelétrico.</span></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="science-box">
+        <h3>Frequência de corte e função trabalho</h3>
+        <p><strong>Frequência de corte (f₀)</strong> é a frequência mínima capaz de provocar emissão de elétrons em determinado material. Abaixo dela, não há emissão, mesmo aumentando a intensidade da luz no modelo ideal.</p>
+        <p><strong>Função trabalho (φ)</strong> é a energia mínima necessária para retirar um elétron da superfície do material.</p>
+        <p class="formula">φ = h · f₀</p>
+        <p>Quando a energia do fóton supera a função trabalho, o excesso aparece como energia cinética do elétron emitido:</p>
+        <p class="formula">E<sub>cin,máx</sub> = h · f − φ</p>
+      </div>
+
+      <div class="mini-quiz" data-quiz="q3">
+        <h3>Você pegou a ideia?</h3>
+        <p>Uma luz está abaixo da frequência de corte de um metal. O que acontece se aumentarmos somente sua intensidade?</p>
+        <div class="quiz-options">
+          <button data-correct="false">Os elétrons passam a ser emitidos</button>
+          <button data-correct="true">Não ocorre emissão fotoelétrica</button>
+          <button data-correct="false">A frequência de corte desaparece</button>
+        </div>
+        <p class="feedback" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="section tinted" id="fotovoltaica">
+      <div class="section-heading">
+        <p class="eyebrow">04 • Tecnologia em ação</p>
+        <h2>Como funciona uma célula fotovoltaica?</h2>
+        <p>A célula fotovoltaica é um dispositivo semicondutor que converte parte da energia da luz em energia elétrica. O funcionamento está ligado ao efeito fotovoltaico, relacionado à interação dos fótons com o semicondutor.</p>
+      </div>
+
+      <div class="steps">
+        <article>
+          <span>01</span>
+          <h3>Chegada dos fótons</h3>
+          <p>A luz incide sobre o material semicondutor, geralmente silício.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Criação de portadores</h3>
+          <p>Fótons com energia adequada podem promover elétrons, formando pares elétron-lacuna.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Separação de cargas</h3>
+          <p>O campo elétrico interno da junção PN ajuda a separar as cargas.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>Corrente elétrica</h3>
+          <p>Com um circuito externo conectado, as cargas podem circular e fornecer energia.</p>
+        </article>
+      </div>
+
+      <div class="two-col">
+        <div class="panel-diagram">
+          <div class="photon">☀️ ↓ fótons</div>
+          <div class="pn">
+            <div class="p-side">Tipo P<br><small>lacunas</small></div>
+            <div class="junction">Junção PN</div>
+            <div class="n-side">Tipo N<br><small>elétrons</small></div>
+          </div>
+          <div class="flow-arrow">⚡ corrente no circuito externo ⚡</div>
+          <p class="small-note">Diagrama conceitual simplificado de uma célula fotovoltaica.</p>
+        </div>
+        <div>
+          <h3>Por que o silício?</h3>
+          <p>O silício é um semicondutor. Suas propriedades elétricas podem ser modificadas por dopagem, processo que introduz pequenas quantidades de outros elementos e permite formar regiões do tipo P e do tipo N.</p>
+          <p>A junção entre essas regiões cria um campo elétrico interno que contribui para separar os portadores de carga gerados pela luz.</p>
+          <p><strong>Importante:</strong> a célula fotovoltaica não precisa aquecer para gerar eletricidade. Ela converte energia luminosa diretamente em elétrica. O aquecimento pode até reduzir sua eficiência em certas condições.</p>
+        </div>
+      </div>
+
+      <div class="comparison">
+        <h3>Solar térmica × solar fotovoltaica</h3>
+        <div class="compare-grid">
+          <div>
+            <span class="compare-icon">♨️</span>
+            <h4>Solar térmica</h4>
+            <p>Absorve radiação e utiliza a energia para aquecer água ou outro fluido. Exemplo: coletor solar térmico para piscina.</p>
+          </div>
+          <div>
+            <span class="compare-icon">🔋</span>
+            <h4>Solar fotovoltaica</h4>
+            <p>Converte energia luminosa em eletricidade. Exemplo: painel que pode alimentar equipamentos elétricos.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mini-quiz" data-quiz="q4">
+        <h3>Hora de diferenciar!</h3>
+        <p>Um painel fotovoltaico instalado no telhado produz principalmente:</p>
+        <div class="quiz-options">
+          <button data-correct="false">Água quente diretamente</button>
+          <button data-correct="true">Energia elétrica</button>
+          <button data-correct="false">Radiação infravermelha para a piscina</button>
+        </div>
+        <p class="feedback" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="section" id="laboratorio">
+      <div class="section-heading">
+        <p class="eyebrow">05 • Aprender testando</p>
+        <h2>Laboratório interativo</h2>
+        <p>Altere os valores, observe os resultados e teste suas hipóteses. Os modelos são didáticos e simplificados, mas usam relações físicas reais.</p>
+      </div>
+
+      <div class="sim-grid">
+        <article class="sim-card">
+          <span class="sim-number">SIMULADOR 01</span>
+          <h3>Energia de um fóton</h3>
+          <p>Escolha uma frequência e veja a energia correspondente.</p>
+          <label for="frequency">Frequência: <output id="frequencyOut">5,0 × 10¹⁴</output> Hz</label>
+          <input type="range" id="frequency" min="1" max="10" step=".1" value="5">
+          <div class="result">
+            <span>Energia do fóton</span>
+            <strong id="photonEnergy">3,31 × 10⁻¹⁹ J</strong>
+          </div>
+          <p class="small-note">E = h · f; h = 6,626 × 10⁻³⁴ J·s.</p>
+        </article>
+
+        <article class="sim-card">
+          <span class="sim-number">SIMULADOR 02</span>
+          <h3>Frequência de corte</h3>
+          <p>Compare a frequência da luz com a frequência de corte hipotética de um material.</p>
+          <label for="incidentFreq">Frequência da luz: <output id="incidentOut">6,0</output> × 10¹⁴ Hz</label>
+          <input type="range" id="incidentFreq" min="1" max="10" step=".1" value="6">
+          <label for="cutoffFreq">Frequência de corte: <output id="cutoffOut">5,0</output> × 10¹⁴ Hz</label>
+          <input type="range" id="cutoffFreq" min="1" max="10" step=".1" value="5">
+          <div class="result">
+            <span id="cutoffStatus">Há emissão no modelo</span>
+            <strong id="cutoffEnergy">Energia excedente positiva</strong>
+          </div>
+        </article>
+
+        <article class="sim-card">
+          <span class="sim-number">SIMULADOR 03</span>
+          <h3>Resposta fotovoltaica</h3>
+          <p>Altere a intensidade da luz que chega ao painel. A corrente é ilustrativa e proporcional à intensidade neste modelo simplificado.</p>
+          <label for="lightIntensity">Intensidade luminosa: <output id="lightOut">70</output>%</label>
+          <input type="range" id="lightIntensity" min="0" max="100" value="70">
+          <div class="meter"><div id="meterFill"></div></div>
+          <div class="result">
+            <span>Geração relativa simulada</span>
+            <strong id="generationOut">70%</strong>
+          </div>
+          <p class="small-note">Na prática, a geração depende também da temperatura, área, orientação, sombreamento e características do módulo.</p>
+        </article>
+
+        <article class="sim-card">
+          <span class="sim-number">SIMULADOR 04</span>
+          <h3>Temperatura da piscina</h3>
+          <p>Compare uma situação ilustrativa com e sem capa térmica. A capa reduz principalmente a evaporação.</p>
+          <label for="poolTemp">Temperatura inicial: <output id="poolTempOut">30</output> °C</label>
+          <input type="range" id="poolTemp" min="20" max="38" value="30">
+          <label class="switch-label"><input type="checkbox" id="coverToggle"> Simular uso de capa térmica</label>
+          <div class="result">
+            <span>Perda relativa estimada em 1 período</span>
+            <strong id="poolLoss">Sem capa: 10 unidades</strong>
+          </div>
+          <p class="small-note">Modelo ilustrativo, não é previsão de engenharia. As perdas reais dependem do vento, umidade, área, temperatura do ar e outros fatores.</p>
+        </article>
+      </div>
+
+      <div class="mini-quiz featured-quiz" data-quiz="q5">
+        <h3>Desafio relâmpago: Física em campo! 🏆</h3>
+        <p>Se dois fótons têm frequências diferentes, qual deles possui maior energia?</p>
+        <div class="quiz-options">
+          <button data-correct="false">O de menor frequência</button>
+          <button data-correct="true">O de maior frequência</button>
+          <button data-correct="false">Os dois sempre têm a mesma energia</button>
+        </div>
+        <p class="feedback" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="section tinted" id="piscina">
+      <div class="section-heading">
+        <p class="eyebrow">06 • Aplicação complementar</p>
+        <h2>Da Física para a Piscina Inteligente</h2>
+        <p>Depois de compreender os fenômenos, podemos imaginar como eles ajudam a projetar soluções para uma piscina mais eficiente.</p>
+      </div>
+
+      <div class="cards three">
+        <article class="info-card">
+          <span class="card-icon">☀️</span>
+          <h3>Coletor solar térmico</h3>
+          <p>Absorve a radiação solar e transfere calor para a água da piscina.</p>
+        </article>
+        <article class="info-card">
+          <span class="card-icon">🔋</span>
+          <h3>Painel fotovoltaico</h3>
+          <p>Gera eletricidade que pode alimentar bombas, controles e outros equipamentos compatíveis.</p>
+        </article>
+        <article class="info-card">
+          <span class="card-icon">🧠</span>
+          <h3>Sensores e automação</h3>
+          <p>Monitoram temperatura e luminosidade para apoiar decisões de controle e eficiência.</p>
+        </article>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <h3>Como a piscina perde calor?</h3>
+          <ul class="check-list">
+            <li><strong>Evaporação:</strong> a água passa para o estado gasoso e leva energia consigo.</li>
+            <li><strong>Convecção:</strong> há troca de calor entre a superfície da água e o ar.</li>
+            <li><strong>Radiação:</strong> a água emite radiação térmica, principalmente na faixa do infravermelho.</li>
+            <li><strong>Condução:</strong> pode ocorrer transferência de calor por contato com estruturas.</li>
+          </ul>
+        </div>
+        <div class="pool-illustration" role="img" aria-label="Ilustração de uma piscina recebendo energia solar e sendo monitorada por sensores">
+          <div class="pool-sun">☀️</div>
+          <div class="pool-water"><span>🌡️</span><span>💧</span><span>💧</span></div>
+          <div class="pool-panel">▦ Painel solar</div>
+          <div class="pool-sensor">◉ Sensor</div>
+        </div>
+      </div>
+
+      <div class="callout"><strong>Uma aplicação possível:</strong> o coletor solar térmico aquece a água; uma capa térmica ajuda a conservar o calor, principalmente por reduzir a evaporação; painéis fotovoltaicos podem fornecer eletricidade para equipamentos; sensores monitoram as condições do sistema.</div>
+    </section>
+
+    <section class="section" id="robotica">
+      <div class="section-heading">
+        <p class="eyebrow">07 • Robótica aplicada</p>
+        <h2>Nosso protótipo no Tinkercad</h2>
+        <p>O circuito demonstra monitoramento de luminosidade e temperatura com Arduino. Ele é uma representação didática de como sensores podem auxiliar a automação de uma piscina.</p>
+      </div>
+
+      <div class="robot-layout">
+        <div class="robot-card">
+          <div class="robot-visual">
+            <span class="robot-sun">☀️</span>
+            <div class="robot-pool">💧 PISCINA 💧</div>
+            <div class="robot-board">ARDUINO UNO</div>
+            <div class="robot-leds"><i></i><i></i><i></i></div>
+          </div>
+          <p class="small-note">Representação conceitual do circuito. As ligações e componentes devem seguir o esquema montado no Tinkercad.</p>
+        </div>
+        <div>
+          <h3>Componentes e funções</h3>
+          <ul class="component-list">
+            <li><b>Arduino Uno:</b> interpreta os dados e controla as saídas.</li>
+            <li><b>LDR:</b> detecta variações na intensidade luminosa.</li>
+            <li><b>TMP36:</b> fornece uma leitura de temperatura para a simulação.</li>
+            <li><b>LEDs:</b> indicam condições programadas.</li>
+            <li><b>Buzzer:</b> emite alerta quando a temperatura ultrapassa o limite definido.</li>
+          </ul>
+          <p><strong>Nota científica:</strong> o LDR é um sensor fotoresistivo, não uma célula fotovoltaica. A demonstração de conversão de luz em eletricidade é explicada na parte sobre células fotovoltaicas.</p>
+        </div>
+      </div>
+
+      <h3>Lógica do protótipo</h3>
+      <div class="logic-flow">
+        <span>Leitura dos sensores</span>
+        <b>→</b>
+        <span>Arduino compara os valores</span>
+        <b>→</b>
+        <span>LEDs e buzzer respondem</span>
+      </div>
+
+      <details class="code-details">
+        <summary>Ver código Arduino para o Tinkercad</summary>
+        <p>O código considera LDR no A0, TMP36 no A1, LEDs nos pinos 8, 9 e 10 e buzzer no pino 11.</p>
+        <pre><code id="arduinoCode">const int pinoLDR = A0;
+const int pinoTMP = A1;
+const int ledVerde = 8;
+const int ledAmarelo = 9;
+const int ledVermelho = 10;
+const int buzzer = 11;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(ledVerde, OUTPUT);
+  pinMode(ledAmarelo, OUTPUT);
+  pinMode(ledVermelho, OUTPUT);
+  pinMode(buzzer, OUTPUT);
+}
+
+void loop() {
+  int leituraLuz = analogRead(pinoLDR);
+  int leituraTemp = analogRead(pinoTMP);
+
+  float tensao = leituraTemp * (5.0 / 1023.0);
+  float temperatura = (tensao - 0.5) * 100.0;
+
+  digitalWrite(ledVerde, LOW);
+  digitalWrite(ledAmarelo, LOW);
+  digitalWrite(ledVermelho, LOW);
+  noTone(buzzer);
+
+  if (temperatura < 26.0) {
+    digitalWrite(ledVerde, HIGH);
+  } else if (temperatura <= 30.0) {
+    digitalWrite(ledAmarelo, HIGH);
+  } else {
+    digitalWrite(ledVermelho, HIGH);
+    tone(buzzer, 1000);
+  }
+
+  Serial.print("Temperatura: ");
+  Serial.print(temperatura);
+  Serial.print(" C | Luz (0-1023): ");
+  Serial.println(leituraLuz);
+
+  delay(500);
+}</code></pre>
+        <button class="btn secondary copy-code" id="copyCode">Copiar código Arduino</button>
+      </details>
+
+      <p class="small-note">A fórmula de conversão acima corresponde ao TMP36. No Tinkercad, confira a orientação dos terminais e o modelo selecionado. A leitura do LDR depende da montagem do divisor de tensão.</p>
+    </section>
+
+    <section class="section tinted" id="sustentabilidade">
+      <div class="section-heading">
+        <p class="eyebrow">08 • Ciência e sociedade</p>
+        <h2>Energia, sustentabilidade e inclusão</h2>
+      </div>
+      <div class="cards three">
+        <article class="info-card">
+          <span class="card-icon">🌱</span>
+          <h3>Uso consciente</h3>
+          <p>A geração solar pode reduzir a dependência de fontes fósseis, considerando fabricação, instalação e descarte dos equipamentos.</p>
+        </article>
+        <article class="info-card">
+          <span class="card-icon">🏙️</span>
+          <h3>Tecnologia cotidiana</h3>
+          <p>O efeito fotovoltaico aparece em telhados solares, calculadoras, satélites e sistemas de geração distribuída.</p>
+        </article>
+        <article class="info-card">
+          <span class="card-icon">♿</span>
+          <h3>Inclusão digital</h3>
+          <p>Um conteúdo científico deve poder ser explorado por pessoas com diferentes necessidades sensoriais, motoras e cognitivas.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="quiz-final">
+      <div class="section-heading">
+        <p class="eyebrow">09 • Revisão geral</p>
+        <h2>Quiz: teste seus conhecimentos</h2>
+        <p>Responda às questões e veja seu resultado. Você pode tentar novamente.</p>
+      </div>
+
+      <form id="finalQuiz" class="final-quiz">
+        <fieldset>
+          <legend>1. Qual é a relação entre energia do fóton e frequência?</legend>
+          <label><input type="radio" name="qf1" value="a"> São inversamente proporcionais.</label>
+          <label><input type="radio" name="qf1" value="b"> São diretamente proporcionais.</label>
+          <label><input type="radio" name="qf1" value="c"> Não possuem relação.</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>2. O que representa a frequência de corte?</legend>
+          <label><input type="radio" name="qf2" value="a"> A frequência mínima para ocorrer emissão fotoelétrica.</label>
+          <label><input type="radio" name="qf2" value="b"> A frequência máxima de qualquer luz.</label>
+          <label><input type="radio" name="qf2" value="c"> A velocidade da luz no metal.</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>3. Qual cientista explicou o efeito fotoelétrico usando quanta de luz?</legend>
+          <label><input type="radio" name="qf3" value="a"> Isaac Newton.</label>
+          <label><input type="radio" name="qf3" value="b"> Albert Einstein.</label>
+          <label><input type="radio" name="qf3" value="c"> Galileu Galilei.</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>4. O que uma célula fotovoltaica produz?</legend>
+          <label><input type="radio" name="qf4" value="a"> Eletricidade a partir da luz.</label>
+          <label><input type="radio" name="qf4" value="b"> Combustível a partir da água.</label>
+          <label><input type="radio" name="qf4" value="c"> Apenas calor.</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>5. Qual é a função do campo elétrico interno da junção PN?</legend>
+          <label><input type="radio" name="qf5" value="a"> Impedir a entrada de luz.</label>
+          <label><input type="radio" name="qf5" value="b"> Ajudar a separar portadores de carga.</label>
+          <label><input type="radio" name="qf5" value="c"> Transformar eletricidade em som.</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>6. Qual mecanismo a capa térmica de piscina reduz especialmente?</legend>
+          <label><input type="radio" name="qf6" value="a"> Evaporação.</label>
+          <label><input type="radio" name="qf6" value="b"> Gravidade.</label>
+          <label><input type="radio" name="qf6" value="c"> Frequência da luz.</label>
+        </fieldset>
+
+        <button class="btn primary" type="submit">Corrigir minhas respostas</button>
+        <button class="btn secondary" type="reset" id="resetQuiz">Refazer quiz</button>
+        <div id="quizResult" class="quiz-result" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <section class="section" id="libras">
+      <div class="section-heading">
+        <p class="eyebrow">Acessibilidade em Libras</p>
+        <h2>Conteúdo também em Língua Brasileira de Sinais</h2>
+        <p>O VLibras fica disponível pelo botão flutuante na tela. Esta área também está preparada para receber vídeos próprios em Libras, gravados pela equipe ou fornecidos pela escola.</p>
+      </div>
+      <div class="libras-placeholder">
+        <div class="libras-icon" aria-hidden="true">🤟</div>
+        <div>
+          <h3>Espaço para vídeo em Libras</h3>
+          <p><strong>Vídeo 1:</strong> introdução à natureza da luz e aos fótons.</p>
+          <p><strong>Vídeo 2:</strong> explicação do efeito fotoelétrico e da frequência de corte.</p>
+          <p><strong>Vídeo 3:</strong> funcionamento da célula fotovoltaica.</p>
+          <p class="small-note">Substituam este espaço pelos vídeos finais. Incluam título, identificação do tema e controles acessíveis. O VLibras é um recurso de apoio e não substitui uma tradução humana revisada quando ela for necessária.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section references" id="referencias">
+      <div class="section-heading">
+        <p class="eyebrow">10 • Para continuar estudando</p>
+        <h2>Referências e fontes de consulta</h2>
+        <p>As fontes abaixo ajudam a aprofundar os conceitos. Consulte também livros didáticos de Física e materiais indicados pelo professor.</p>
+      </div>
+      <ul>
+        <li>OpenStax. <em>University Physics, Volume 3</em>. Seções sobre fótons, efeito fotoelétrico e física quântica. <a href="https://openstax.org/details/books/university-physics-volume-3" target="_blank" rel="noopener">Acessar livro</a>.</li>
+        <li>Nobel Prize. <em>The Nobel Prize in Physics 1921: Albert Einstein</em>. <a href="https://www.nobelprize.org/prizes/physics/1921/summary/" target="_blank" rel="noopener">Acessar conteúdo</a>.</li>
+        <li>NIST. <em>Fundamental Physical Constants</em>. Constante de Planck e constantes físicas. <a href="https://physics.nist.gov/cuu/Constants/" target="_blank" rel="noopener">Consultar constantes</a>.</li>
+        <li>U.S. Department of Energy. <em>Solar Photovoltaic Technology Basics</em>. <a href="https://www.energy.gov/eere/solar/solar-photovoltaic-technology-basics" target="_blank" rel="noopener">Acessar conteúdo</a>.</li>
+        <li>W3C. <em>Web Content Accessibility Guidelines (WCAG) 2.2</em>. <a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener">Consultar diretrizes de acessibilidade</a>.</li>
+      </ul>
+      <p class="small-note">Este site é um material educativo. Os simuladores usam modelos simplificados e não substituem medições ou dimensionamentos de sistemas reais.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">☀ Sol + Água</div>
+    <p>Física quântica, energia solar e tecnologia acessível.</p>
+    <h3 class="footer-map-title">Mapa do site</h3>
+    <nav class="footer-map" aria-label="Mapa do site">
+      <a href="#ondas">Ondas eletromagnéticas</a>
+      <a href="#corpo-negro">Corpo negro</a>
+      <a href="#fotoeletrico">Efeito fotoelétrico</a>
+      <a href="#fotovoltaica">Células fotovoltaicas</a>
+      <a href="#laboratorio">Laboratório</a>
+      <a href="#piscina">Piscina inteligente</a>
+      <a href="#robotica">Robótica</a>
+      <a href="#quiz-final">Quiz</a>
+      <a href="#libras">Libras</a>
+      <a href="#referencias">Referências</a>
+    </nav>
+    <a href="#inicio">Voltar ao início ↑</a>
+  </footer>
+
+  <!-- Widget oficial VLibras: requer conexão com a internet para carregar. -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    if (window.VLibras) {
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
